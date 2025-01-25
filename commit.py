@@ -24,4 +24,4 @@ if __name__ == '__main__':
             #os.system('date {} && time {}'.format(line[0], '16:00:00'))
             for i in range(int(line[1])):
                 time_str = timestamp_to_str(str_to_timestamp(line[0] + ' 16:00:00')) + ' +0800'
-                git.commit('--allow-empty', '--date=' + time_str, '-m', line[0] + '_' + str(i+1))
+                git.commit('--allow-empty', '--amend', '--date=' + time_str, '-m', line[0] + '_' + str(i+1))
